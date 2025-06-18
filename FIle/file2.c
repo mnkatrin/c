@@ -8,8 +8,8 @@ int main() {
 	FILE *output = fopen("output.txt","w");
 	char arr[N];
 	while (fgets(arr,N,input)) {
-		int i = 0;
-		for (; arr[i]!='\0' && arr[i] != '\n'; i++) {}
+		int i;
+		for (i = 0; arr[i]!='\0' && arr[i] != '\n'; i++) {}
 		while (i > 0) {
 			i--;
 			fputc(arr[i], output);
