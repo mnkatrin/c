@@ -9,7 +9,7 @@ int main() {
 	char a[] = "; ";
 	char new_arr[N] = "";
 	while(fgets(arr, N, input) != NULL) {
-		arr[strcspn(arr,"\n")] = '\0';
+		arr[strcspn(arr,"\n")] = '\0'; //удаляем символ новой строки
 		if (new_arr[0] != '\0') strcat(new_arr, a);
 		strcat(new_arr,arr);
 	}
