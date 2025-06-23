@@ -33,6 +33,7 @@ void rec_to_s(char s[], Information info) {
 	sprintf(s, format, info.specification, info.name,info.designation,info.position);
 }
 
+
 void echo_print(Information info[], int limit) {
 	for (int i = 0; i < limit; i = i + 1) {
 		char s[100] = ""; 
@@ -62,3 +63,10 @@ void number_of_entries(Information  info[],int limit,char *file_name){
 	fclose(out);
 }
 
+void fioname() {
+	FILE *ini = fopen("ini.txt", "r");
+	char s[100] = "";
+	while (fgets(s, 100, ini)) {
+		printf("%s\n", s);
+	}
+}
